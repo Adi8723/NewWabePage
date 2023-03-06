@@ -1,15 +1,16 @@
-const hamburger = document.querySelector('.hamburger');
+let hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const closeEl = document.querySelector('.menu__close');
 
 
 
-hamburger.addEventListener('click', () =>{
+
+hamburger.addEventListener('click', () => {
     menu.classList.add('active');
 })
 
 
-closeEl.addEventListener('click', () =>{
+closeEl.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
@@ -20,4 +21,37 @@ const lines = document.querySelectorAll('.skills__progressiv-line span');
 counters.forEach((item, i) => {
     lines[i].style.width = item.innerHTML;
 });
-console.log('counters :>> ', counters);
+
+
+
+
+
+
+    $('.form').submit(function (e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: 'mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find('input, textarea').val('')
+
+            $('form').trigger('reset');
+
+        })
+        return false;
+    })
+
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 1600){
+          $('.pageup').fadeIn();
+        }else{
+          $('.pageup').fadeOut();
+        }
+      })
+    

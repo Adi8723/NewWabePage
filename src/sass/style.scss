@@ -21,6 +21,18 @@
     background-color: $main-color;
     margin: 25px auto 0 auto;
 }
+.pageup{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    img{
+        width: 100%;
+
+    }
+}
 
 @import 'blocks/promo';
 @import 'blocks/title';
@@ -31,3 +43,4 @@
 @import 'blocks/benefit';
 @import 'blocks/skills';
 @import 'blocks/portfolio';
+@import 'blocks/contacts';
