@@ -24,34 +24,29 @@ counters.forEach((item, i) => {
 
 
 
+$('form').submit(function (e) {
+    e.preventDefault();
+    if (!$(this).valid()) {
+        return;
+    }
+    $.ajax({
+        type: 'POST',
+        url: 'mailer/smart.php',
+        data: $(this).serialize()
+    }).done(function () {
+        $(this).find('input, textarea').val('')
 
+        $('form').trigger('reset');
 
-
-    $('.form').submit(function (e) {
-        e.preventDefault();
-
-        if (!$(this).valid()) {
-            return;
-        }
-
-        $.ajax({
-            type: 'POST',
-            url: 'mailer/smart.php',
-            data: $(this).serialize()
-        }).done(function () {
-            $(this).find('input, textarea').val('')
-
-            $('form').trigger('reset');
-
-        })
-        return false;
     })
+    return false;
+})
 
-    $(window).scroll(function(){
-        if($(this).scrollTop() > 1600){
-          $('.pageup').fadeIn();
-        }else{
-          $('.pageup').fadeOut();
-        }
-      })
-    
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 1200) {
+        $('.pageup').fadeIn();
+    } else {
+        $('.pageup').fadeOut();
+    }
+})
+
