@@ -1,4 +1,5 @@
 .hamburger {
+
     position: absolute;
     top: 20px;
     right: 30px;
@@ -8,6 +9,7 @@
     justify-content: space-between;
     align-items: flex-end;
     cursor: pointer;
+
 
     span {
         display: block;
@@ -31,16 +33,20 @@
     z-index: 10;
     visibility: hidden;
     opacity: 0;
-    transition: all .6s;
-    &.active{
+    transition: all .9s;
+
+    &.active {
         left: 0;
         visibility: visible;
         opacity: 1;
+
+
     }
+
     &__block {
         position: relative;
         // left: -100%;
-        transition: all .6s;
+        transition: all 0.9s;
         width: 345px;
         height: 100%;
         padding-top: 140px;
@@ -61,6 +67,8 @@
         list-style-type: none;
         text-transform: uppercase;
         padding-left: 35px;
+        transition: all 0.4s;
+
     }
 
     &__link {
@@ -69,11 +77,13 @@
         font-size: 24px;
         line-height: 36px;
         margin-bottom: 15px;
-        a{
-            color:#fff;
+
+        a {
+            color: #fff;
             text-decoration: none;
         }
-        &:before{
+
+        &:before {
             content: '';
             position: absolute;
             left: -35px;
@@ -84,10 +94,11 @@
             border: 1px solid #000;
             transition: all .6s;
         }
-        &:hover{
-            &:before{
+
+        &:hover {
+            &:before {
                 background-color: #fff;
-            } 
+            }
         }
     }
 
@@ -102,7 +113,7 @@
         align-items: center;
     }
 
-    &__overlay{
+    &__overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -110,5 +121,7 @@
         height: 100vh;
         background-color: #fff;
         opacity: .5;
+
+
     }
 }

@@ -1,8 +1,9 @@
+
 .promo {
     min-height: 100vh;
-    background: url('../img/main-bg1.jpg') no-repeat 50%/cover;
+    background: url('../img/img1.jpg') no-repeat 50%/cover;
     padding-top: 205px;
-
+   
     &__subtitle{
         position: relative;
         padding-left: 10px;
@@ -20,15 +21,18 @@
         width: 250px;
         justify-content: space-between;
         align-items: center;
+        
     }
     &__link{
         color: #000;
         font-weight: bold;
         &:hover{
             color: #000;
-            text-decoration: none;
+            
+
         }
     }
+   
 
   
 }

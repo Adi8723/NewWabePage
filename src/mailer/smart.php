@@ -1,9 +1,10 @@
+
+
 <?php 
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['text'];
-
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -15,7 +16,7 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'adikuskg87@gmail.com';                 // Наш логин
-$mail->Password = 'zyppylukbytnoezb';                           // Наш пароль от ящика
+$mail->Password = 'nouzcoaxpthdmzqc';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
@@ -32,9 +33,9 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
-	Имя: ' . $name . ' <br>
-	E-mail: ' . $email . ' <br>
-	text: ' . $text . ''
+	name: ' . $name . ' <br>
+	email: ' . $email . '<br>
+	Text: ' . $text . '';
 
 if(!$mail->send()) {
     return false;

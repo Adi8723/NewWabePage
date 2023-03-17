@@ -10,7 +10,9 @@
     padding: 0;
     scroll-behavior: smooth;
 }
-
+body{
+    background-color: #fff;
+}
 .container{
     width: 1140px;
     margin: 0 auto;
@@ -45,4 +47,9 @@
 @import 'blocks/skills';
 @import 'blocks/portfolio';
 @import 'blocks/contacts';
+@import 'blocks/modal';
+
+
+
+
 @import 'blocks/media';
